@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>亚马逊网店</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/idangerous.swiper.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    
+    <style>
+      li{
+        float: left;
+        list-style: none;
+      }
+      #title img{
+        width: 293px;
+        height: 400px;
+      }
+      .prev{
+        width: 27px;
+        height: 30px;
+        float: left;
+        background: #c49b9b;
+      }
+      .next{
+        width: 27px;
+        height: 30px;
+        float: left;
+        background: #c49b9b;
+      }
+      .Timer{
+        width: 600px;
+        height: 386px;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+  </head>
+  <body>
+  
+  
+    <div class="container-fluid">
+      <div class="row">
+        <div class="swiper-container" style="float: left;">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide blue-slide"><img src="img/aside1.jpg"></div>
+            <div class="swiper-slide blue-slide"><img src="img/aside2.jpg"></div>
+            <div class="swiper-slide blue-slide"><img src="img/aside3.jpg"></div>
+            <div class="swiper-slide blue-slide"><img src="img/aside4.jpg"></div>
+          </div>
+          </div>
+            <div class="prev">《</div>
+            <div class="next">》</div>
+            <div class="item_p_text">
+              <ul>
+                <li style="text-align: left; list-style: none">
+                  <del><p>330.03￥</p></del> 200￥
+                </li>
+                <li>
+                  <p>面料: 乙烯醋酸乙烯酯 (EVA)</p>
+                </li>
+                <li>
+                  <p>鞋底材质: 橡胶</p>
+                </li>
+                <li>
+                  <p>封口类型: 滑扣</p>
+                </li>
+                <li>
+                  <p>鞋跟类型: 平跟</p>
+                </li>
+                <li>
+                  <p>面料类型: 注塑 Eva</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <script src="js/jquery-1.10.1.min.js"></script>
+        <script src="js/idangerous.swiper-2.0.min.js"></script>
+        <script type="text/javascript">
+          window.onload = function() {
+            var mySwiper = new Swiper('.swiper-container',{
+              loop: true
+              // 其它设置
+            })
+          }
+          var mySwiper = new Swiper('.swiper-container',{
+        pagination: '.pagination',
+        loop:true,
+        grabCursor: true,
+        paginationClickable: true
+      })
+      $('.arrow-left').on('click', function(e){
+        e.preventDefault()
+        mySwiper.swipePrev()
+      })
+      $('.arrow-right').on('click', function(e){
+        e.preventDefault()
+        mySwiper.swipeNext()
+      })
+        </script>
+  </body>
+</html>
